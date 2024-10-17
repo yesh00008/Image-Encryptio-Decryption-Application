@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Decryption</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h1>Image Decryption</h1>
+            <form id="decryptForm" enctype="multipart/form-data">
+                <label for="decryptFile">Select Encrypted File:</label>
+                <input type="file" id="decryptFile" name="decryptFile" accept=".bin" required>
+
+                <label for="decryptKey">Enter Encryption Key:</label>
+                <input type="text" id="decryptKey" name="decryptKey" required>
+
+                <button type="submit">Decrypt Image</button>
+            </form>
+
+            <div id="decryptionResult" style="display: none;">
+                <h2>Decrypted Image</h2>
+                <a id="decryptedLink" class="btn" download="decrypted_image.png" style="display: none;">Download Decrypted Image</a>
+            </div>
+
+            <a href="index.html" class="btn">Go Back to Encryption</a>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
